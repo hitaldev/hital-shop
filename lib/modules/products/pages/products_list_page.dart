@@ -150,7 +150,7 @@ class ProductsListPage extends StatelessWidget {
                     itemCount: controller.products!.length,
                     padding: EdgeInsets.symmetric(horizontal: 20),
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 3,
+                      crossAxisCount: MediaQuery.of(context).size.width > 700 ? 5 : 3,
                       mainAxisSpacing: 0,
                       crossAxisSpacing: 20,
                       mainAxisExtent: 200

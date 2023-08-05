@@ -62,7 +62,7 @@ class HomePage extends StatelessWidget {
                         ],
                       ),
                       Spacer(),
-                      Image.asset("assets/images/logo_horiz.png", height: 38,),
+                      // Image.asset("assets/images/logo_horiz.png", height: 38,),
                       Spacer(),
                       GestureDetector(
                         onTap: () => Get.to(ProductsListPage()),

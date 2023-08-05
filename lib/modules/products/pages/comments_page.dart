@@ -14,7 +14,7 @@ class CommentsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetBuilder<CommentsController>(
-      init: CommentsController(id),
+      init:CommentsController(id),
       builder: (controller) {
         return Scaffold(
           body: SafeArea(

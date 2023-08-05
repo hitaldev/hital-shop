@@ -17,7 +17,7 @@ class StartPage extends StatelessWidget {
           child: Column(
             children: [
               Spacer(),
-              Image.asset("assets/images/logo.png", height: 100,),
+              Image.asset("assets/images/logo.webp", height: 100,),
               Spacer(),
               Container(
                 width: double.infinity,

@@ -14,14 +14,14 @@ class SplashPage extends StatelessWidget {
           body: SafeArea(
             child: Stack(
               children: [
-                Image.asset("assets/images/background.png",
+                Image.asset("assets/images/background.webp",
                   height: MediaQuery.of(context).size.height,
                   width: MediaQuery.of(context).size.width,
                   fit: BoxFit.cover,
                   opacity: AlwaysStoppedAnimation(0.45),
                 ),
                 Center(
-                  child: Image.asset("assets/images/logo.png", height: 100,)
+                  child: Image.asset("assets/images/logo.webp", height: 100,)
                 )
               ],
             ),

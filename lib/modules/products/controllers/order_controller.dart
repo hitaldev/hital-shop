@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 import 'package:hital_shop/backend/repositories/product_repository.dart';
 import 'package:hital_shop/backend/repositories/profile_repository.dart';
@@ -7,6 +8,8 @@ import 'package:hital_shop/helpers/widgets/snackbar_widget.dart';
 import 'package:hital_shop/modules/products/controllers/cart_controller.dart';
 import 'package:hital_shop/modules/products/pages/payment_page.dart';
 import 'package:hital_shop/modules/products/widgets/radio_widget.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 class OrderController extends GetxController {
 
@@ -58,7 +61,11 @@ class OrderController extends GetxController {
   Future<void> order() async {
     if (selectedAddress != null && selectedMethod != null) {
       var link = await productRepository.order(addressId: selectedAddress!.id!, shippingMethod: selectedMethod!.value);
-      Get.off(PaymentPage(link: link,));
+      if(kIsWeb) {
+        launchUrlString(link, webOnlyWindowName: "_self");
+      } else {
+        Get.off(PaymentPage(link: link,));
+      }
     } else {
       errorMessage("لطفا همه موارد را انتخاب کنید");
     }
