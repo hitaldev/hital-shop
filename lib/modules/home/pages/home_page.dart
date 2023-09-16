@@ -54,7 +54,7 @@ class HomePage extends StatelessWidget {
                                     color: Color(0xFFFF6060)
                                   ),
                                   child: Center(child: Text(controller.cartResponse!.totalItems.toString(),
-                                    style: TextStyle(fontSize: 13, color: Colors.white, fontWeight: FontWeight.bold),)),
+                                    style: TextStyle(fontSize: 13, color: Colors.white,fontWeight: FontWeight.bold),)),
                                 ),
                               );
                             }
@@ -62,7 +62,7 @@ class HomePage extends StatelessWidget {
                         ],
                       ),
                       Spacer(),
-                      // Image.asset("assets/images/logo_horiz.png", height: 38,),
+                      Image.asset("assets/images/logo_horiz.png", height: 38,),
                       Spacer(),
                       GestureDetector(
                         onTap: () => Get.to(ProductsListPage()),

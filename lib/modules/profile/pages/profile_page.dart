@@ -7,7 +7,7 @@ import 'package:hital_shop/modules/profile/pages/orders_page.dart';
 import 'package:hital_shop/modules/profile/widgets/icon_button_widget.dart';
 import 'package:hital_shop/modules/profile/widgets/logout_dialog.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:share_plus/share_plus.dart';
+// import 'package:share_plus/share_plus.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
@@ -81,7 +81,7 @@ class _ProfilePageState extends State<ProfilePage> with AutomaticKeepAliveClient
               SizedBox(height: 15,),
               GestureDetector(
                 onTap: () {
-                  Share.share('لطفا اپلیکیشن فروشگاه هیتال را نصب کنید. برای نصب می توانید از لینک استفاده کنید : https://hitaldev.ir');
+                  // Share.share('لطفا اپلیکیشن فروشگاه هیتال را نصب کنید. برای نصب می توانید از لینک استفاده کنید : https://hitaldev.ir');
                 },
                 child: IconButtonWidget(title: 'دعوت از دوستان', icon: Iconsax.user_cirlce_add,)
               ),
